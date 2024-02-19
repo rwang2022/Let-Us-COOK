@@ -1,0 +1,24 @@
+2024-02-19 UPDATE DEVLOG HERE, MOST RECENT AT TOP
+update on assingments:
+Ryan:
+- 
+Rachel: 
+- 
+Erika: 
+- 
+Maddie: 
+- 
+
+2024-02-19 13:00
+assignments: Everyone will work on src/IngredientList.ts (if you need help with TypeScript or its compiler, ask!)
+Ryan:
+- design
+- assignments
+- testing
+Rachel: 
+- addIngredient(name: string, attr: IngredientAttr)
+Erika: 
+- addList(otherList: IngredientList): IngredientList 
+Maddie: 
+- removeIngredient(name: string, attr: IngredientAttr) {}
+- removeList(otherList: IngredientList) {}
