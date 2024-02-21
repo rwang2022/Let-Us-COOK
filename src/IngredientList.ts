@@ -8,7 +8,13 @@ class IngredientList {
 
     constructor() { } 
     
-    addIngredient(name: string, attr: IngredientAttr) {}
+    addIngredient(name: string, attr: IngredientAttr) {
+        // name is already in this.ingredients
+        if (this.ingredients[name]) this.ingredients[name].count += attr.count;
+
+        // name is NOT in this.ingredients
+        else this.ingredients[name] = attr;
+    }
 
     // no need to update this.ingredients 
     // just return the sum of this and otherList
