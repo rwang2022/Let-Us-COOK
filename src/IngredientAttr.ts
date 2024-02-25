@@ -1,20 +1,8 @@
 class IngredientAttr {
-    count: number;
     type: IngredientType;
+    isVegan: boolean;
+    containsPeanuts: boolean;
     //TODO later: implement optional attributes like allergies and religious preferences
 
-    constructor(count: number, type: IngredientType) {
-        this.count = count;
-        this.type = type;
-    }
-
-    increaseCount(count: number): void {
-        this.count += count;
-    }
-
-    decreaseCount(count: number): void {
-        this.count -= count;
-    }
-    
-    doNothing(): void {}
+    constructor() {}
 }

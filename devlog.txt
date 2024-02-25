@@ -1,7 +1,10 @@
 2024-02-19 UPDATE DEVLOG HERE, MOST RECENT AT TOP
 update on assingments:
 Ryan:
-- 
+- a brief summary on the main ideas
+    - IngredientList: Pantry, ShoppingList, and part of Recipe
+    - Pantry - [Recipe1 + ...]
+    - ShoppingList = [Recipe1 + Recipe2 + ...] - Pantry
 Rachel: 
 - 
 Erika: 

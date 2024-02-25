@@ -4,35 +4,26 @@
 class IngredientList {
     // ingredients is a dictionary that maps names to attributes
     // e.g. "apples": {count=5, type=IngredientType.fruit}
-    ingredients: { [key: string]: IngredientAttr }
+    ingredients: { [key: string]: number }
 
-    constructor() { } 
+    constructor() { }
     
-    addIngredient(name: string, attr: IngredientAttr) {
+    addIngredient(name: string, count: number) {
         // name is already in this.ingredients
-        if (this.ingredients[name]) this.ingredients[name].count += attr.count;
+        if (this.ingredients[name]) this.ingredients[name] += count;
 
         // name is NOT in this.ingredients
-        else this.ingredients[name] = attr;
+        else this.ingredients[name] = count;
     }
 
-    // no need to update this.ingredients 
-    // just return the sum of this and otherList
     addList(otherList: IngredientList): IngredientList {
         return new IngredientList();
     }
 
     // remove if possible, do nothing otherwise. 
     // if an ingredient's count becomes zero, remove it 
-    removeIngredient(name: string, attr: IngredientAttr) {}
+    removeIngredient(name: string, count: number) {}
     
-    // you may assume that otherList is a subset of this
-    // Pantry will call this on a Recipe.ingredients
-    // and will be updated to lose those ingredients
+    // remove elements from otherList that you CAN remove
     removeList(otherList: IngredientList) {}
-
-    // otherList may contain elements that are not in this
-    // that's okay, just remove elements that you CAN remove
-    // ShoppingList will call this on Pantry
-    removeListIfPossible(otherList: IngredientList) {}
 }
