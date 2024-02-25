@@ -2,28 +2,55 @@
  * will be used for Pantry and ShoppingList, as well as being part of Recipes
  */
 class IngredientList {
-    // ingredients is a dictionary that maps names to attributes
-    // e.g. "apples": {count=5, type=IngredientType.fruit}
+    // ingredients is a dictionary that maps names to counts
     ingredients: { [key: string]: number }
 
-    constructor() { }
-    
+    constructor(ingredients: { [key: string]: number } = {}) {
+        this.ingredients = ingredients;
+    }
+
+    print() {
+        for (let name in this.ingredients) {
+            console.log(name + ":" + this.ingredients[name]);
+        }
+        console.log();
+    }
+
     addIngredient(name: string, count: number) {
         // name is already in this.ingredients
-        if (this.ingredients[name]) this.ingredients[name] += count;
+        if (name in this.ingredients) this.ingredients[name] += count;
 
         // name is NOT in this.ingredients
         else this.ingredients[name] = count;
     }
 
-    addList(otherList: IngredientList): IngredientList {
-        return new IngredientList();
+    addList(otherList: IngredientList) {
+        for (let key in otherList.ingredients) {
+            this.addIngredient(key, otherList.ingredients[key]);
+        }
     }
 
-    // remove if possible, do nothing otherwise. 
-    // if an ingredient's count becomes zero, remove it 
-    removeIngredient(name: string, count: number) {}
-    
+    removeIngredient(name: string, count: number) {
+        // name is already in this.ingredient
+        if (this.ingredients[name] > count) this.ingredients[name] -= count;
+        // if count becomes zero remove it 
+        if (this.ingredients[name] === 0) delete this.ingredients[name];
+    }
+
     // remove elements from otherList that you CAN remove
-    removeList(otherList: IngredientList) {}
+    removeList(otherList: IngredientList) {
+        for (let name in otherList.ingredients) {
+            this.removeIngredient(name, otherList.ingredients[name]);
+        }
+    }
 }
+
+// TODO test more of IngredientList functions
+let Pantry = new IngredientList({"apples": 5});
+Pantry.print();
+
+let ShoppingList = new IngredientList({"apples": 1, "bananas": 2});
+ShoppingList.print();
+
+Pantry.addList(ShoppingList);
+Pantry.print();
