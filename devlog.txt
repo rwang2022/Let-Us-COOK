@@ -1,16 +1,12 @@
-2024-02-19 UPDATE DEVLOG HERE, MOST RECENT AT TOP
-update on assingments:
+2024-02-25
 Ryan:
-- a brief summary on the main ideas
-    - IngredientList: Pantry, ShoppingList, and part of Recipe
-    - Pantry - [Recipe1 + ...]
-    - ShoppingList = [Recipe1 + Recipe2 + ...] - Pantry
-Rachel: 
-- 
-Erika: 
-- 
-Maddie: 
-- 
+- project updates
+    - no longer putting count: number in IngredientAttr
+    - IngredientList is done, trying to test it 
+- discoveries
+    - $ npm install                         looks inside package.json for dependencies
+    - $ npm install ts-node --save-dev      installs as dev dependency ($ npm install --production will skip it)
+    - $ npx ts-node src\tests.ts            lets you run TS directly
 
 2024-02-19 13:00
 assignments: Everyone will work on src/IngredientList.ts (if you need help with TypeScript or its compiler, ask!)

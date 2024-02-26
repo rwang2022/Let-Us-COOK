@@ -2,5 +2,8 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "outDir": "dist",
-  }
+  },
+  "include": [
+    "src/*.ts"
+  ],
 }

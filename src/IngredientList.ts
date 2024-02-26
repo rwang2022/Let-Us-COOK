@@ -1,7 +1,7 @@
 /**
  * will be used for Pantry and ShoppingList, as well as being part of Recipes
  */
-class IngredientList {
+export class IngredientList {
     // ingredients is a dictionary that maps names to counts
     ingredients: { [key: string]: number }
 
@@ -32,7 +32,7 @@ class IngredientList {
 
     removeIngredient(name: string, count: number) {
         // name is already in this.ingredient
-        if (this.ingredients[name] > count) this.ingredients[name] -= count;
+        if (this.ingredients[name] >= count) this.ingredients[name] -= count;
         // if count becomes zero remove it 
         if (this.ingredients[name] === 0) delete this.ingredients[name];
     }
@@ -44,13 +44,3 @@ class IngredientList {
         }
     }
 }
-
-// TODO test more of IngredientList functions
-let Pantry = new IngredientList({"apples": 5});
-Pantry.print();
-
-let ShoppingList = new IngredientList({"apples": 1, "bananas": 2});
-ShoppingList.print();
-
-Pantry.addList(ShoppingList);
-Pantry.print();

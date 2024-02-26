@@ -1,4 +1,6 @@
 "use strict";
+exports.__esModule = true;
+exports.IngredientList = void 0;
 /**
  * will be used for Pantry and ShoppingList, as well as being part of Recipes
  */
@@ -28,7 +30,7 @@ var IngredientList = /** @class */ (function () {
     };
     IngredientList.prototype.removeIngredient = function (name, count) {
         // name is already in this.ingredient
-        if (this.ingredients[name] > count)
+        if (this.ingredients[name] >= count)
             this.ingredients[name] -= count;
         // if count becomes zero remove it 
         if (this.ingredients[name] === 0)
@@ -42,9 +44,4 @@ var IngredientList = /** @class */ (function () {
     };
     return IngredientList;
 }());
-var Pantry = new IngredientList({ "apples": 5 });
-Pantry.print();
-var ShoppingList = new IngredientList({ "apples": 1, "bananas": 2 });
-ShoppingList.print();
-Pantry.addList(ShoppingList);
-Pantry.print();
+exports.IngredientList = IngredientList;

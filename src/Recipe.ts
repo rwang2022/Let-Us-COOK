@@ -1,3 +1,5 @@
+import { IngredientList } from "./IngredientList";
+
 class Recipe extends IngredientList {
     name: string;
     ingredients: { [key: string]: number }; // {name : count}

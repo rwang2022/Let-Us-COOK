@@ -14,6 +14,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
+var IngredientList_1 = require("./IngredientList");
 var Recipe = /** @class */ (function (_super) {
     __extends(Recipe, _super);
     function Recipe(name) {
@@ -22,4 +24,4 @@ var Recipe = /** @class */ (function (_super) {
         return _this;
     }
     return Recipe;
-}(IngredientList));
+}(IngredientList_1.IngredientList));
