@@ -8,3 +8,4 @@ var IngredientType;
     IngredientType[IngredientType["dairy"] = 4] = "dairy";
     IngredientType[IngredientType["spice"] = 5] = "spice";
 })(IngredientType || (IngredientType = {}));
+//# sourceMappingURL=IngredientType.js.map

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "outDir": "dist",
+    "sourceMap": true,
   },
   "include": [
     "src/*.ts"

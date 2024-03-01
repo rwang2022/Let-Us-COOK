@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.IngredientList = void 0;
 /**
  * will be used for Pantry and ShoppingList, as well as being part of Recipes
@@ -45,3 +45,4 @@ var IngredientList = /** @class */ (function () {
     return IngredientList;
 }());
 exports.IngredientList = IngredientList;
+//# sourceMappingURL=IngredientList.js.map

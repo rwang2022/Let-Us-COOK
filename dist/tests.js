@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var isEqual = require('lodash').isEqual; // for Node.js
 var IngredientList_1 = require("./IngredientList");
 // TODO test more of IngredientList functions
@@ -18,3 +18,4 @@ if (!isEqual(Pantry.ingredients, { "bananas": 2 })) {
     console.log("test 3 failed");
     Pantry.print();
 }
+//# sourceMappingURL=tests.js.map
