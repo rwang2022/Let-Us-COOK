@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "_comment":"so that I can use isEqual to compare two dictionaries while testing",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
