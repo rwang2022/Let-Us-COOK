@@ -5,4 +5,3 @@ var IngredientAttr = /** @class */ (function () {
     }
     return IngredientAttr;
 }());
-//# sourceMappingURL=IngredientAttr.js.map

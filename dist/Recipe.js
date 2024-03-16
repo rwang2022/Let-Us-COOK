@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var IngredientList_1 = require("./IngredientList");
 var Recipe = /** @class */ (function (_super) {
     __extends(Recipe, _super);
@@ -25,4 +25,3 @@ var Recipe = /** @class */ (function (_super) {
     }
     return Recipe;
 }(IngredientList_1.IngredientList));
-//# sourceMappingURL=Recipe.js.map
